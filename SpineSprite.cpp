@@ -792,7 +792,7 @@ void SpineSprite::_get_property_list(List<PropertyInfo> *p_list) const {
     p_list->push_back(PropertyInfo(Variant::INT, "track_count", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
 
     for (size_t i=0; i<current_animations.size(); ++i) {
-        String prefix = vformat("ca/%d/", i);
+        String prefix = vformat("ca/%d/", (unsigned int) i);
         p_list->push_back(PropertyInfo(Variant::NIL, vformat("ID %d", (unsigned int) i), PROPERTY_HINT_NONE, prefix, PROPERTY_USAGE_GROUP));
         p_list->push_back(PropertyInfo(Variant::INT, vformat("%strack_id", prefix), PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
 
